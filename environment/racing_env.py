@@ -101,7 +101,7 @@ class RacingEnv(gym.Env):
         self.step_count = 0
         sensor_reading = self._get_stub_sensor_reading()
         observation = self._normalize_observation(sensor_reading)
-        info = {}
+        info = {"sensors": sensor_reading}
         return observation, info
 
     def step(self, action: np.ndarray):
@@ -126,7 +126,7 @@ class RacingEnv(gym.Env):
             "crashed": False,
         }
         return observation, reward, terminated, truncated, info
-    def render(self):
+    def render(self,render_mode:str|None=None):
         """Placeholder for Pygame renderer (added in Phase 2)"""
         pass
     def close(self):

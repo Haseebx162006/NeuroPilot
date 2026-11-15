@@ -69,7 +69,7 @@ class SensorReading:
     headingError: float
     lateralOffset: float
     halfWidth: float
-    rays: np.array[float]
+    rays: np.ndarray
     curvatureOfRoad: float
     opponentGapInMeter: float | None
     opponentClosingSpeed: float
