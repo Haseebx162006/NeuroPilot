@@ -1,0 +1,42 @@
+[speed_high]
+HighSpeedThershold = 20.0
+
+[speed_low]
+LowSpeedThreshold = 8.0
+
+[corner_ahead]
+CornerAheadCurvatureThreshold = 0.2
+
+[sharp_turn]
+SharpTurnCurvatureThreshold = 0.4
+
+[overspeed_for_corner]
+OverspeedSafetyMargin = 1.15
+OverspeedMaxLateralAcceleration = 6.0
+
+[near_edge]
+NearEdgeThreshold = 1.5
+
+[obstacle_ahead]
+ObstacleAheadThreshold = 20.0
+
+[obstacle_close]
+ObstacleCloseThreshold = 8.0
+
+[opponent_near]
+OpponentNear = 15.0
+
+[collision_risk_high]
+CollisionRiskHighThreshold = 1.5 
+
+[side_free_left]
+SideFreeLeftThreshold = 15.0
+
+[side_free_right]
+SideFreeRightThreshold = 15.0
+
+[stalled]
+StalledThreshold = 1.0
+
+[heading_misaligned]
+HeadingMisalignedThreshold = 0.6
