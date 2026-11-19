@@ -20,7 +20,6 @@ def resolveFacts(sensorReading: SensorReading) -> Fact:
     if (abs(sensorReading.curvatureOfRoad) > factConfig.SharpTurnCurvatureThreshold):
         fact.sharpTurn = True
 
-    # TODO
     try:
         if (sensorReading.speed > factConfig.OverspeedSafetyMargin * sqrt(factConfig.OverspeedMaxLateralAcceleration / abs(sensorReading.curvatureOfRoad))):
             fact.overspeedForCorner = True
