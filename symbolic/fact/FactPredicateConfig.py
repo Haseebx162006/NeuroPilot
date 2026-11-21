@@ -1,5 +1,5 @@
 from common.domain.domain.SensorReading import SensorReading
-from Facts import Fact
+from symbolic.fact.Fact import Fact
 from FactConfig import FactConfig
 from math import sqrt
 from common.domain.constants import HALF_TRACK_WIDTH

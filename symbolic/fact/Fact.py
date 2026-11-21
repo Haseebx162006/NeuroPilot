@@ -1,6 +1,4 @@
 from dataclasses import dataclass
-from common.domain.domain.SensorReading import SensorReading
-from FactConfig import FactConfig
 
 @dataclass
 class Fact:
