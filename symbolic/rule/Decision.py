@@ -1,9 +1,9 @@
 from dataclasses import dataclass, field
 
-from Strategy import Startegy
+from Strategy import Strategy
 from Rule import Rule
 from common.domain.domain.SensorReading import SensorReading
-from symbolic.facts.Facts import Fact
+from symbolic.fact.Fact import Fact
 
 @dataclass
 class Decision:
@@ -14,7 +14,7 @@ class Decision:
     brakeMax: float = 1.0
     steerLimit: float = 1.0 # max absolute steering
     steerBias: float = 0.0 # additive, in [-1, 1]
-    strategy: Startegy = Startegy.CRUISE
+    strategy: Strategy = Strategy.CRUISE
     explanation: list[str] = field(default_factory=list)
 
     @staticmethod

@@ -3,7 +3,7 @@ from symbolic.fact.Fact import Fact
 from symbolic.rule.Decision import Decision
 from symbolic.rule.Rule import Rule
 from symbolic.rule.rules.Rules import TODO
-from symbolic.rule.Strategy import Startegy, FuzzyCollisionRisk
+from symbolic.rule.Strategy import Strategy, FuzzyCollisionRisk
 
 
 def CollionAvoidanceAction(
@@ -15,7 +15,7 @@ def CollionAvoidanceAction(
 
     decision.throttleMax = 0.2
     decision.brakeMin = brakingFuzzyLogic(fact, sensorReading)
-    decision.strategy = Startegy.EVADE
+    decision.strategy = Strategy.EVADE
 
     if (fact.sideFreeLeft and not fact.sideFreeRight):
         # negative for left

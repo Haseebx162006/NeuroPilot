@@ -3,12 +3,12 @@ from symbolic.fact.Fact import Fact
 from symbolic.rule.Rule import Rule
 from symbolic.rule.Decision import Decision
 from symbolic.rule.RuleConstant import k_d, k_p
-from symbolic.rule.Strategy import Startegy
+from symbolic.rule.Strategy import Strategy
 
 
 def RecoveryAction(fact: Fact, sensorReading: SensorReading) -> Decision:
     decision = Decision()
-    decision.strategy = Startegy.RECOVER
+    decision.strategy = Strategy.RECOVER
     decision.throttleMax = 0.3
     decision.steerBias = -k_p * (sensorReading.lateralOffset / sensorReading.halfWidth) - k_d * sensorReading.headingError
     decision.steerBias = min(1,0, max(0.0, decision.steerBias))

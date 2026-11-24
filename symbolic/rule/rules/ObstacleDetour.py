@@ -21,5 +21,5 @@ ObstacleDetour = Rule(
     id = "R7 ObstacleDetour",
     priority = 65,
     condition = lambda fact, sensor, action: fact.obstacleAhead and not fact.obstacleClose,
-    action = lambda fact, sensor: ObstacleDetourAction(fact, sensor, TODO())
+    proposedAction = lambda fact, sensor: ObstacleDetourAction(fact, sensor, TODO())
 )

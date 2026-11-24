@@ -2,6 +2,7 @@
 from typing import Callable
 from common.domain.domain.SensorReading import SensorReading
 from symbolic.fact.Fact import Fact
+from symbolic.rule.Rule import Rule
 from symbolic.rule.rules.AntiSpin import AntiSpin
 from symbolic.rule.rules.AntiTimidity import AntiTimidity
 from symbolic.rule.rules.CornerEntry import CornerEntry
@@ -23,7 +24,7 @@ FuzzyCollisionRisk = Callable[[Fact, SensorReading], float]
 FuzzyBrakeIntensity = Callable[[Fact, SensorReading], float] 
 AStartWayPintSteerBias = Callable[[Fact, SensorReading], float]
 
-Rules = [
+Rules: list[Rule] = [
     Recovery,
     EmergencyBrake,
     CollionAvoidance,

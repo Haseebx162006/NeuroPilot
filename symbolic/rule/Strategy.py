@@ -1,6 +1,6 @@
 from enum import Enum
 
-class Startegy(Enum):
+class Strategy(Enum):
     CRUISE = "CRUISE"
     RECOVER = "RECOVER"
     EVADE = "EVADE"

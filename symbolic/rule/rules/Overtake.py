@@ -2,14 +2,14 @@ from common.domain.domain.SensorReading import SensorReading
 from symbolic.fact.Fact import Fact
 from symbolic.rule.Decision import Decision
 from symbolic.rule.Rule import Rule
-from symbolic.rule.Strategy import Startegy
+from symbolic.rule.Strategy import Strategy
 
 def OvertakeAction(
     fact: Fact,
     sensorReading: SensorReading,
 ) -> Decision:
     decision = Decision()
-    decision.strategy = Startegy.OVERTAKE
+    decision.strategy = Strategy.OVERTAKE
 
     if (fact.sideFreeLeft and not fact.sideFreeRight):
         # negative for left
@@ -34,5 +34,5 @@ Overtake = Rule(
         (fact.sideFreeRight or fact.sideFreeLeft) and
         not fact.collisionRiskHigh
     ),
-    action = OvertakeAction
+    proposedAction = OvertakeAction
 )
