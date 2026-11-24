@@ -5,10 +5,10 @@ HighSpeedThershold = 20.0
 LowSpeedThreshold = 8.0
 
 [corner_ahead]
-CornerAheadCurvatureThreshold = 0.2
+CornerAheadCurvatureThreshold = 0.02
 
 [sharp_turn]
-SharpTurnCurvatureThreshold = 0.4
+SharpTurnCurvatureThreshold = 0.04
 
 [overspeed_for_corner]
 OverspeedSafetyMargin = 1.15

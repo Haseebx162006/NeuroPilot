@@ -41,7 +41,7 @@ def resolveFacts(sensorReading: SensorReading) -> Fact:
     if (sensorReading.rays[3] < factConfig.ObstacleCloseThreshold):
         fact.obstacleClose = True
 
-    if (sensorReading.timeToCollide < factConfig.CollisionRiskHighThreshold):
+    if (sensorReading.timeToCollide > 0.0 and sensorReading.timeToCollide < factConfig.CollisionRiskHighThreshold):
         fact.collisionRiskHigh = True
 
     if (sensorReading.rays[1] > factConfig.SideFreeLeftThreshold):
@@ -56,7 +56,7 @@ def resolveFacts(sensorReading: SensorReading) -> Fact:
     if (abs(sensorReading.headingError) > factConfig.HeadingMisalignedThreshold):
         fact.headingMisaligned = True
 
-    if (sensorReading.opponentGapInMeter < factConfig.OpponentNear):
+    if (sensorReading.opponentGapInMeter is not None and sensorReading.opponentGapInMeter < factConfig.OpponentNear):
         fact.opponentNear = True
 
     fact.clearRoad = not any(

@@ -22,5 +22,5 @@ OverSpeedGuard = Rule(
     id = "R5 OverSpeedGuard",
     priority = 80,
     condition = lambda fact, sensor, action: fact.overspeedForCorner,
-    proposedAction = lambda fact, sensor: OverSpeedGuardAction(fact, sensor, TODO())
+    action = lambda fact, sensor: OverSpeedGuardAction(fact, sensor, TODO())
 )

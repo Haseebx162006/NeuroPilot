@@ -7,7 +7,7 @@ EmergencyBrake = Rule(
     id = "R2 EmergencyBrake",
     priority = 95,
     condition = lambda fact, sensor, action: fact.obstacleClose and sensor.speed > 6.0,
-    action = Decision(
+    action = lambda fact, sensor: Decision(
         throttleMax = 0.0,
         brakeMin = 0.8
     )

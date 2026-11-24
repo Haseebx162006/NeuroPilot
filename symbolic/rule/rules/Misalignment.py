@@ -6,5 +6,5 @@ Misalignment = Rule(
     id = "R10 Misalignment",
     priority = 45,
     condition = lambda fact, sensor, action: fact.headingMisaligned and fact.speedHigh,
-    proposedAction = lambda fact, sensor: Decision(throttleMax = 0.5)
+    action = lambda fact, sensor: Decision(throttleMax = 0.5)
 )

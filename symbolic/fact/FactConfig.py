@@ -34,7 +34,7 @@ class FactConfig:
 
     @staticmethod
     def readConfig() -> FactConfig:
-        with open("Config.toml") as configFile:
+        with open("symbolic\\fact\\Config.toml") as configFile:
             config = tomllib.load(configFile)
 
         return FactConfig(
